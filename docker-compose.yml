@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+    conference-db:
+        image: postgres:11.5-alpine
+        container_name: conference-db
+        ports:
+            - '5432:5432'
+        environment:
+            POSTGRES_DB: conference_db
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: Welcome
+        restart: unless-stopped
+
+    pgadmin:
+        container_name: conference-pgadmin
+        image: dpage/pgadmin4
+        ports:
+            - "5050:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: admin@admin.com
+            PGADMIN_DEFAULT_PASSWORD: Welcome
+        restart: always
