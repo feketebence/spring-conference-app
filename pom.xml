@@ -68,11 +68,12 @@
 				<configuration>
 					<executable>true</executable>
 
-					<environmentVariables>
-						<db.url>jdbc:postgresql://localhost:5432/conference_db</db.url>
-						<db.username>postgres</db.username>
-						<db.password>Welcome</db.password>
-					</environmentVariables>
+<!--					These variables are needed to mvn package the application locally-->
+<!--					<environmentVariables>-->
+<!--						<db.url>jdbc:postgresql://localhost:5432/conference_db</db.url>-->
+<!--						<db.username>postgres</db.username>-->
+<!--						<db.password>Welcome</db.password>-->
+<!--					</environmentVariables>-->
 				</configuration>
 			</plugin>
 		</plugins>
